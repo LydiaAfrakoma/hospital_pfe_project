@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Manage Medications</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Medication Name</th>
+                <th>Pharmacist</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medication in medications %}
+            <tr>
+                <td>{{ medication.name }}</td>
+                <td>{{ medication.pharmacist }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

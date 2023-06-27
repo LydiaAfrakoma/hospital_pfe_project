@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Manage Presence and Absence List</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Is Present</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in presence_absence_list %}
+            <tr>
+                <td>{{ entry.doctor }}</td>
+                <td>{{ entry.date }}</td>
+                <td>{{ entry.is_present }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

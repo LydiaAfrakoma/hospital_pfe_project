@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Create Pharmacist</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.admin.label_tag }}
+            {{ form.admin }}
+        </div>
+        <div class="mb-3">
+            {{ form.address.label_tag }}
+            {{ form.address }}
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+{% endblock %}
